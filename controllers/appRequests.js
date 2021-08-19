@@ -1,6 +1,7 @@
+require('dotenv').config();
 const axios = require('axios');
 const APIKey = require('../config.js');
-const baseURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
+const baseURL = process.env.HOST;  //'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
 
 const getCurrentProductInfo = (req, res) => {
   axios.defaults.headers.common['Authorization'] = APIKey;

@@ -3,7 +3,7 @@ const axios = require('axios');
 const { url } = require('inspector');
 const _ = require('underscore');
 const APIKey = require('../config.js');
-const baseURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
+const baseURL = process.env.HOST;  //'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
 
 
 const getProductStyles = ((req, res) => {

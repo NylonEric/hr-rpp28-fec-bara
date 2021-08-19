@@ -3,7 +3,7 @@ const APIKey = require('../config.js');
 const cloudinary = require('cloudinary').v2;
 const streamifier = require('streamifier');
 const cloudinaryConfig = require('../config2.js');
-const baseURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
+const baseURL = process.env.HOST;  //'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
 
 
 const getQuestions = (req, res) => {

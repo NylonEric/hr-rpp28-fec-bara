@@ -1,5 +1,5 @@
 
-const baseURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
+const baseURL = process.env.HOST;  //'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
 const APIKey = require('../config.js');
 var axios = require('axios');
 const cloudinary = require('cloudinary').v2;

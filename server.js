@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const PATH = require('path');
 const bodyParser = require('body-parser');
@@ -5,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const app = express();
 const upload = multer();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(PATH.join(__dirname, 'client', 'dist')));
 app.use('/outfit', cookieParser());

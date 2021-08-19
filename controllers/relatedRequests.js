@@ -2,7 +2,7 @@ const axios = require('axios');
 const _ = require('underscore');
 const Promise = require('bluebird');
 const APIKey = require('../config.js');
-const baseURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
+const baseURL = process.env.HOST;  //'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp';
 
 // Helper function to get cropped url
 const cropUrl = (origUrl, newWidth) => {
